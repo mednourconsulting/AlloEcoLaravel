@@ -27,3 +27,18 @@ MAIL_ENCRYPTION=tls
 php artisan migrate
 
 //rest à modifier l'email message detail
+
+//add admins comptes
+
+php artisan tinker
+
+$admin = new App\Admin
+
+$admin->username = "admin"
+
+$admin->password = Hash::make('adminadmin')
+
+$admin->save()
+
+
+
