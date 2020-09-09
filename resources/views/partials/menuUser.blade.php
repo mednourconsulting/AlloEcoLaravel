@@ -31,9 +31,10 @@
         </div>
 
         <div class="col-12">
-          <nav class="site-navigation text-right ml-auto " role="navigation">
+          <nav class="site-navigation text-right ml-auto" role="navigation">
 
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="{{ url('/') }}">Acceuil</a></li>
             @guest
                 <li><a href="{{ route('login') }}" class="nav-link">S'identifier</a></li>
                 @if (Route::has('register'))
