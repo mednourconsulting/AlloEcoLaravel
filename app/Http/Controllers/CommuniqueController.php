@@ -53,7 +53,7 @@ class CommuniqueController extends Controller
        $commmunique->body = $request->input('body');
 
        if($request->hasFile('file')){
-         $communique->file = $input['filename'];
+         $commmunique->file = $input['filename'];
         //$commmunique->file = $request->file->store('file');
        }
 
