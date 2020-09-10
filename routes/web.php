@@ -14,7 +14,7 @@
 
 Auth::routes(['verify' => true]);
 
-Route::get('/', 'AcceuilController@showAll');
+Route::get('', 'AcceuilController@showAll');
 
 Route::post('/','ContactController@store');
 
