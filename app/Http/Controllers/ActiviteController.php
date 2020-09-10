@@ -45,7 +45,7 @@ class ActiviteController extends Controller
      $activite->body = $request->input('body');
 
      if($request->hasFile('file')){
-      $activite->file = $request->file->store('file');
+      $activite->file = $request->file->move(base_path().'/public/images/');
      }
 
      $activite->save();
