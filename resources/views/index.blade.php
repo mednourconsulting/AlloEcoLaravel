@@ -84,10 +84,10 @@
 
 
                 <li class="has-children">
-                  <a href="#about-section" class="nav-link">About Us</a>
+                  <a href="#about-section" class="nav-link">À propos</a>
                   <ul class="dropdown arrow-top">
                     <li><a href="#team-section" class="nav-link">OPEMH</a></li>
-                    <li><a href="#faq-section" class="nav-link">Objectifs</a></li>
+                    <li><a href="#objectif-section" class="nav-link">Objectifs</a></li>
                   </ul>
                 </li>
 
@@ -389,7 +389,7 @@ En effet, l’Observatoire accompagne cette dynamique structurante, en tant que 
     </div>
 
 
-    <section class="site-section bg-light" id="pricing-section">
+    <section class="site-section bg-light" id="objectif-section">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-7 text-center">
