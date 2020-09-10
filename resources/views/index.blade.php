@@ -565,7 +565,7 @@ En effet, l’Observatoire accompagne cette dynamique structurante, en tant que 
           @foreach($activites as $activite)
           <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="">
             <div>
-              <a href="{{ url('activite/'.$activite->id) }}" class="mb-4 d-block"><img width="500px" height="300px" src="{{ asset('/images/'.$activite->file) }}" alt="Image"></a>
+              <a href="{{ url('activite/'.$activite->id) }}" class="mb-4 d-block"><img width="500px" height="300px" src="{{URL::to('/')}}/images/{{$activite->file}}" alt="Image"></a>
               <h3><form class="" action="{{ url('activite/'.$activite->id) }}" method="post">
                 <a href="{{ url('activite/'.$activite->id) }}" class="h3">{{ $activite->titre }}</a>
               </form></h3>
