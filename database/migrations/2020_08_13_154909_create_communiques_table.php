@@ -16,7 +16,7 @@ class CreateCommuniquesTable extends Migration
         Schema::create('communiques', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('titre');
-            $table->string('body');
+            $table->string('body,20000');
             $table->string('file')->nullable();
             $table->timestamps();
         });
