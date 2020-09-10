@@ -30,7 +30,7 @@
     </div>
   </div>
 
-  <div class="site-wrap"  id="home-section">
+  <div class="site-section"  id="home-section">
 
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
@@ -77,9 +77,9 @@
             </div>
 
             <div class="col-12">
-              <nav class="site-navigation text-right ml-auto " role="navigation">
+              <nav class="site-navigation navbar-expand-md scrolling-navbar text-right position-relative ml-auto" role="navigation">
 
-                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                <ul class="site-menu main-menu js-clone-nav ml-auto d-none pl-0 d-lg-block">
                 <li><a href="#services-section" class="nav-link">Domaine d'actions</a></li>
 
 
