@@ -38,14 +38,24 @@ class ActiviteController extends Controller
       'titre' =>'required|string|min:3|max:100',
       'body' => 'required|string|min:10|max:20000'
     ]);
-
+/*
+    if($request->hasFile('file')){
+      $image = $request->file('file');
+      $input['filename'] = time().'.'.$image->getClientOriginalExtension();
+      $path = public_path('/files');
+      $image->move($path,$input['filename']);
+    }
+*/
      $activite = new Activite();
 
      $activite->titre = $request->input('titre');
      $activite->body = $request->input('body');
 
+
+
      if($request->hasFile('file')){
-      $activite->file = $request->file->move(base_path().'/public/images/');
+      //$activite->file = $image;
+      $activite->file = $request->file->store('files');
      }
 
      $activite->save();
