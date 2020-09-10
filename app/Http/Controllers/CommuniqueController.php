@@ -40,13 +40,21 @@ class CommuniqueController extends Controller
         'body' => 'required|string|min:10|max:20000'
       ]);
 
+      if($request->hasFile('file')){
+        $image = $request->file('file');
+        $input['filename'] = time().'.'.$image->getClientOriginalExtension();
+        $path = public_path('/files');
+        $image->move($path,$input['filename']);
+      }
+
        $commmunique = new Communique();
 
        $commmunique->titre = $request->input('titre');
        $commmunique->body = $request->input('body');
 
        if($request->hasFile('file')){
-        $commmunique->file = $request->file->store('file');
+         $communique->file = $input['filename'];
+        //$commmunique->file = $request->file->store('file');
        }
 
        $commmunique->save();
@@ -71,13 +79,21 @@ class CommuniqueController extends Controller
         'titre' =>'required|string|min:3|max:100',
         'body' => 'required|string|min:10|max:20000'
       ]);
+
+      if($request->hasFile('file')){
+        $image = $request->file('file');
+        $input['filename'] = time().'.'.$image->getClientOriginalExtension();
+        $path = public_path('/files');
+        $image->move($path,$input['filename']);
+      }
       $communique = Communique::find($id);
 
       $communique->titre = $request->input('titre');
       $communique->body = $request->input('body');
 
       if($request->hasFile('file')){
-       $communique->file = $request->file->store('file');
+       //$communique->file = $request->file->store('file');
+       $communique->file = $input['filename'];
       }
 
       $communique->save();
