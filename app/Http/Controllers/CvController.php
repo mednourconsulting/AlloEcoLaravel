@@ -44,12 +44,6 @@ class CvController extends Controller
         'file'  => 'mimes:mp4,mov,ogg | max:20000'
       ]);
 
-      if($request->hasFile('file')){
-        $image = $request->file('file');
-        $input['filename'] = time().'.'.$image->getClientOriginalExtension();
-        $path = public_path('/files');
-        $image->move($path,$input['filename']);
-      }
 
        $cv = new Cv();
 
@@ -58,8 +52,12 @@ class CvController extends Controller
        $cv->user_id = Auth::user()->id;
 
        if($request->hasFile('file')){
+         $image = $request->file('file');
+         $input['filename'] = time().'.'.$image->getClientOriginalExtension();
+         $path = public_path('/files');
+         $image->move($path,$input['filename']);
          $cv->photo = $input['filename'];
-        //$cv->photo = $request->file->store('image');
+
        }
 
 
@@ -89,21 +87,17 @@ class CvController extends Controller
         'file'  => 'mimes:mp4,mov,ogg | max:20000'
       ]);
 
-      if($request->hasFile('file')){
-        $image = $request->file('file');
-        $input['filename'] = time().'.'.$image->getClientOriginalExtension();
-        $path = public_path('/files');
-        $image->move($path,$input['filename']);
-      }
-
       $cv = Cv::find($id);
 
       $cv->titre = $request->input('titre');
       $cv->presentation = $request->input('presentation');
 
       if($request->hasFile('file')){
+        $image = $request->file('file');
+        $input['filename'] = time().'.'.$image->getClientOriginalExtension();
+        $path = public_path('/files');
+        $image->move($path,$input['filename']);
         $cv->photo = $input['filename'];
-       //$cv->photo = $request->file->store('image');
       }
 
       $cv->save();

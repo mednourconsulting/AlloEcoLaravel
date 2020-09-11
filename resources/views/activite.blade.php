@@ -87,7 +87,7 @@
                   <a href="{{url('/')}}#about-section" class="nav-link">À propos</a>
                   <ul class="dropdown arrow-top">
                     <li><a href="{{url('/')}}#team-section" class="nav-link">OPEMH</a></li>
-                    <li><a href="{{url('/')}}#faq-section" class="nav-link">Objectifs</a></li>
+                    <li><a href="{{url('/')}}#objectif-section" class="nav-link">Objectifs</a></li>
                   </ul>
                 </li>
 

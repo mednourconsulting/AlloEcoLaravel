@@ -39,12 +39,6 @@ class ActiviteController extends Controller
       'body' => 'required|string|min:10|max:20000'
     ]);
 
-    if($request->hasFile('file')){
-      $image = $request->file('file');
-      $input['filename'] = time().'.'.$image->getClientOriginalExtension();
-      $path = public_path('/files');
-      $image->move($path,$input['filename']);
-    }
 
      $activite = new Activite();
 
@@ -54,8 +48,12 @@ class ActiviteController extends Controller
 
 
      if($request->hasFile('file')){
+       $image = $request->file('file');
+       $input['filename'] = time().'.'.$image->getClientOriginalExtension();
+       $path = public_path('/files');
+       $image->move($path,$input['filename']);
       $activite->file = $input['filename'];
-      //$activite->file = $request->file->store('files');
+      
      }
 
      $activite->save();
@@ -81,12 +79,6 @@ class ActiviteController extends Controller
       'body' => 'required|string|min:10|max:20000'
     ]);
 
-    if($request->hasFile('file')){
-      $image = $request->file('file');
-      $input['filename'] = time().'.'.$image->getClientOriginalExtension();
-      $path = public_path('/files');
-      $image->move($path,$input['filename']);
-    }
 
     $activite = Activite::find($id);
 
@@ -94,8 +86,11 @@ class ActiviteController extends Controller
     $activite->body = $request->input('body');
 
     if($request->hasFile('file')){
+      $image = $request->file('file');
+      $input['filename'] = time().'.'.$image->getClientOriginalExtension();
+      $path = public_path('/files');
+      $image->move($path,$input['filename']);
       $activite->file = $input['filename'];
-     //$activite->file = $request->file->store('file');
     }
 
     $activite->save();
