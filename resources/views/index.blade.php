@@ -569,7 +569,7 @@ En effet, l’Observatoire accompagne cette dynamique structurante, en tant que 
                 @if( $activite->file )
                 <img width="500px" height="300px" src="{{ asset('/files/'.$activite->file) }}" alt="Image">
                 @else
-                  <img width="500px" height="300px" src="{{ asset('/images/'Eau1.png)" alt="Image">
+                  <img width="500px" height="300px" src="{{ asset('/images/Eau1.png')" alt="Image">
                 @endif
               </a>
               <h3><form class="" action="{{ url('activite/'.$activite->id) }}" method="post">
