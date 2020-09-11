@@ -20,7 +20,7 @@
             <p>
               <div class="embed-responsive embed-responsive-21by9">
                 <video id="my-video" class="video-js" controls preload="auto" width="200" height="100" data-setup="{}">
-                   <source src="{{ asset('storage/'.$cvs->photo) }}" type='video/mp4'>
+                   <source src="{{ asset('files/'.$cvs->photo) }}" type='video/mp4'>
                 </video>
               </div>
             </p>
