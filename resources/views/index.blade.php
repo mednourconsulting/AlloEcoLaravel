@@ -566,7 +566,7 @@ En effet, l’Observatoire accompagne cette dynamique structurante, en tant que 
           <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="">
             <div>
               <a href="{{ url('activite/'.$activite->id) }}" class="mb-4 d-block">
-                @if( $activite->file )
+                @if( {{ $activite->file }} )
                 <img width="500px" height="300px" src="{{ asset('/files/'.$activite->file) }}" alt="Image">
                 @else
                   <img width="500px" height="300px" src="images/Eau1.png" alt="Image">
