@@ -131,7 +131,7 @@
 
     </header>
 
-    <div class="site-section-cover overlay inner-page bg-light" style="background-image: url({{ asset('files/'.$communique->file) }})" data-aos="fade">
+    <div class="site-section-cover overlay inner-page bg-light" style="background-image: url(asset('images/t2.jpg'))" data-aos="fade">
 
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
