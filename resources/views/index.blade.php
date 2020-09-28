@@ -566,7 +566,7 @@ En effet, l’Observatoire accompagne cette dynamique structurante, en tant que 
           <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="">
             <div>
 
-                  <img width="500px" height="300px" src="images/Eau1.png" alt="Image">
+                  <img width="500px" height="300px" src="{{ asset('files/'.$activite->file) }}" alt="Image">
               
               </a>
               <h3><form class="" action="{{ url('activite/'.$activite->id) }}" method="post">
